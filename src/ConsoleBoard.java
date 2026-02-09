@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class App {
+public class ConsoleBoard {
    static String[][] board = new String[9][9];
 
-   public App() {
+   public ConsoleBoard() {
    }
 
    public static void main(String[] args) {
@@ -13,6 +13,7 @@ public class App {
       boolean blackTurn = true;
 
       while(playing) {
+        showBoard(board);
         if(blackTurn)
         {
             System.out.println("Black's turn");
@@ -21,7 +22,7 @@ public class App {
         {
             System.out.println("White's turn");
         }
-         showBoard(board);
+         
          System.out.print("Enter x(-1 to quit):");
          int x = scn.nextInt();
          System.out.print("Enter y(-1 to quit):");
@@ -44,6 +45,8 @@ public class App {
       }
 
       scn.close();
+   
+      
    }
 
    static void createBoard(String[][] board) {
@@ -73,6 +76,7 @@ public class App {
    }
 
    static void showBoard(String[][] board) {
+
       System.err.println("  012345678");
 
       for(int i = 0; i < 9; ++i) {
@@ -86,5 +90,6 @@ public class App {
       }
 
    }
+
 }
 
