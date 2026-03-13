@@ -16,7 +16,6 @@ public class UIBoard {
 
         frame.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
-                // Adjust for window header (insets)
                 int x = Math.round((float) (e.getX() - MARGIN) / GAP);
                 int y = Math.round((float) (e.getY() - MARGIN - frame.getInsets().top) / GAP);
 
